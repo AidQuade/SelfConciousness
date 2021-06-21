@@ -16,5 +16,6 @@
       
    # Progress 2 Initial top down shooter setup.
 This second week I did not get as far as I would have liked on the core switching mechanics and instead just focused on making a working top down shooter base with enemies that have AI to roam randomly, target the player within range and stop or retreat based on the distance of the player. There is no technical single "player" character as any character that is attacking the player needs to also have the ability to be switched into and thus toggle off their state as an AI and give control to the player.
-        
- 
+  
+  # Progress 3 Switching mechanic
+  After trying two different methods I settled on using a collision based switching. When the left shift key is pressed the loose conciousness or soul that was in the character being controlled pops out and the character dies. The player now controls this small orb and time slows down slightly. This orb can pass through walls within the level and cannot take damage, however the player can only survive in this orb state for five seconds so they must quickly switch into another enemy by colliding into them as the orb.
