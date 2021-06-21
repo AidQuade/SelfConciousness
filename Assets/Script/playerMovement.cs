@@ -9,6 +9,7 @@ public class playerMovement : MonoBehaviour
     
     public bool moving = false;
     public float moveSpeed = 0.3f;
+    public timeManager TimeManager;
     public GameObject conciousness;
     private Rigidbody2D rb;
     private bool isPlayer = true;
@@ -49,11 +50,11 @@ public class playerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && gameObject.tag == "Player")
         {
+            TimeManager.SlowMotion();
             Instantiate(conciousness, transform.position, Quaternion.identity);
             gameObject.tag = "non";
             GetComponent<playerMovement>().enabled = false;
-            GetComponent<shooter>().enabled = false;
-            //conciousness.GetComponent<playerMovement>().enabled = true;
+            GetComponent<shooter>().enabled = false; 
             isPlayer = false;
         }
     }

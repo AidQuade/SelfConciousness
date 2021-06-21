@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - non
-  - enemy
   - Enemy
+  - projectile
+  - timemanager
   layers:
   - Default
   - TransparentFX

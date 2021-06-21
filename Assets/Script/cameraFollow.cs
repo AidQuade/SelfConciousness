@@ -23,10 +23,10 @@ public class cameraFollow : MonoBehaviour
         }  
     }
 
-    public void setFollow(bool val)
+    /*public void setFollow(bool val)
     {
         following = val;
-    }
+    }*/
 
     void canFollow()
     {
