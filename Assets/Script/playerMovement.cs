@@ -1,27 +1,75 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
+    
     public bool moving = false;
     public float moveSpeed = 0.3f;
-    public Rigidbody2D rb;
-
+    public GameObject conciousness;
+    private Rigidbody2D rb;
+    private bool isPlayer = true;
     private Vector2 movement;
+    private Vector3 mousePos;
+
+    private Camera cam;
+
+    private Rigidbody2D rd;
+    void Start()
+    {
+        rd = this.GetComponent<Rigidbody2D> ();
+        cam = Camera.main;
+     
+    }
     // Update is called once per frame
     void Update()
     {
+        if (gameObject.tag == "Player")
+        {
+            isPlayer = true;
+            gameObject.GetComponent<shooter>().enabled = true;
+        }
+        if (gameObject.tag == "Enemy")
+        {
+            isPlayer = false;
+            gameObject.GetComponent<shooter>().enabled = false;
+        }
         //inputs
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-    }
+        if (isPlayer == true)
+        {
+            rotateCamera();
+            gameObject.tag = "Player";
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
 
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && gameObject.tag == "Player")
+        {
+            Instantiate(conciousness, transform.position, Quaternion.identity);
+            gameObject.tag = "non";
+            GetComponent<playerMovement>().enabled = false;
+            GetComponent<shooter>().enabled = false;
+            //conciousness.GetComponent<playerMovement>().enabled = true;
+            isPlayer = false;
+        }
+    }
     private void FixedUpdate()
     {
+        rb = this.GetComponent<Rigidbody2D>();
         //movement
         rb.MovePosition(rb.position + movement * moveSpeed);
+        
+    }
+    void rotateCamera()
+    {
+        mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,
+            Input.mousePosition.z));
+        rd.transform.eulerAngles = new Vector3(0, 0,
+            Mathf.Atan2((mousePos.y - transform.position.y), (mousePos.x - transform.position.x)) * Mathf.Rad2Deg);
         
     }
 }

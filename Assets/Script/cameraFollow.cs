@@ -11,13 +11,13 @@ public class cameraFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (following = true)
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (following == true)
         {
             canFollow();
         }  

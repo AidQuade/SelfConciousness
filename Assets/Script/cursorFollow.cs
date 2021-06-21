@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cursorFollow : MonoBehaviour
 {
-    private Vector3 mousePos;
+    /*private Vector3 mousePos;
 
     private Camera cam;
 
@@ -30,5 +30,5 @@ public class cursorFollow : MonoBehaviour
         rd.transform.eulerAngles = new Vector3(0, 0,
             Mathf.Atan2((mousePos.y - transform.position.y), (mousePos.x - transform.position.x)) * Mathf.Rad2Deg);
         
-    }
+    }*/
 }
