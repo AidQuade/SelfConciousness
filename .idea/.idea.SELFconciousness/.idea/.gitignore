@@ -1,13 +1,13 @@
-﻿# Default ignored files
+# Default ignored files
 /shelf/
 /workspace.xml
 # Rider ignored files
-/contentModel.xml
-/.idea.SELFconciousness.iml
-/projectSettingsUpdater.xml
 /modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.SELFconciousness.iml
 # Datasource local storage ignored files
-/dataSources/
+/../../../../../../../../../:\Users\aidan\OneDrive\Desktop\SELFconciousness\.idea\.idea.SELFconciousness\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

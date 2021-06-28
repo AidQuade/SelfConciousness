@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3167046502344853031}
   - component: {fileID: 3167046502344853208}
   - component: {fileID: 3167046502344853209}
+  - component: {fileID: 3125596763636157457}
   m_Layer: 6
   m_Name: enemy2
   m_TagString: Enemy
@@ -30,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3167046502344853026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.57, y: -0.37, z: 0}
-  m_LocalScale: {x: 1.6163782, y: 1.561869, z: 1.561869}
+  m_LocalPosition: {x: -21.3, y: -0.37, z: 0}
+  m_LocalScale: {x: 1.7870364, y: 2.0073729, z: 1.7267723}
   m_Children:
   - {fileID: 3167046503849508508}
   - {fileID: 3167046503381656655}
@@ -167,15 +168,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd0becf3ad0c1343a30548e90e5160b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  viewDistance: 20
+  speed: 8
+  viewDistance: 40
   stoppingDistance: 14
   retreatDistance: 8
   bullet: {fileID: 7829298114233569551, guid: 2a4ff7bc73e812845a359696e4a71761, type: 3}
   bulletPoint: {fileID: 3167046502411946340}
   health: 10
-  bulletForce: 30
-  startTimeShots: 3
+  bulletForce: 40
+  startTimeShots: 1
+--- !u!70 &3125596763636157457
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167046502344853026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.017317632}
+  m_Size: {x: 1, y: 1.595997}
+  m_Direction: 0
 --- !u!1 &3167046502411946339
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +404,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
