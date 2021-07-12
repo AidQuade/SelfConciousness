@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438285728113087265}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 0.891, y: 0.06410335, z: 0}
+  m_LocalPosition: {x: 1.335, y: 0.06410335, z: 0}
   m_LocalScale: {x: 0.4848485, y: 0.5061939, z: 1}
   m_Children: []
   m_Father: {fileID: 4267867095687126886}
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
   m_Color: {r: 0, g: 1, b: 0.18572044, a: 1}
   m_FlipX: 0
@@ -123,14 +123,15 @@ GameObject:
   - component: {fileID: 4267867095687126886}
   - component: {fileID: 878642228563099986}
   - component: {fileID: 8208072586767660723}
-  - component: {fileID: 602037408660012637}
   - component: {fileID: -2692912660746835789}
   - component: {fileID: -2477735272890735620}
   - component: {fileID: 2231490643965218754}
   - component: {fileID: 9096641576735353696}
+  - component: {fileID: -5395608079457528877}
+  - component: {fileID: 6786873390598411146}
   m_Layer: 0
   m_Name: enemy3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +171,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dca21294070c11d48aee702c2a1b91c0, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -190,7 +191,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0.044423144, g: 0.16037738, b: 0.029352076, a: 1}
   m_FlipX: 0
@@ -215,30 +216,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  viewDistance: 60
+  viewDistance: 45
   stoppingDistance: 9
   retreatDistance: 10
-  bullet: {fileID: 7829298114233569551, guid: 2a4ff7bc73e812845a359696e4a71761, type: 3}
+  bullet: {fileID: 7083986773596307050, guid: 45fc7df9492f4cf438bece74a6bf7b81, type: 3}
   bulletPoint: {fileID: 1222707157209181796}
   health: 8
-  bulletForce: 60
-  startTimeShots: 0.6
---- !u!114 &602037408660012637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9197228896789570157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da2c09552d137f74d806bfced1e5ff79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moving: 0
-  moveSpeed: 0.5
-  TimeManager: {fileID: 3721543498802627715, guid: c89c11dd6ce2f2d47912e47a8e6696a2, type: 3}
-  conciousness: {fileID: 5132283873648381468, guid: d60d0c5f015984847beaf09e4ca8ebd6, type: 3}
+  bulletForce: 30
+  startTimeShots: 3
 --- !u!114 &-2692912660746835789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,8 +249,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPoint: {fileID: 1222707157209181796}
-  bulletPrefab: {fileID: 7829298114233569551, guid: 2a4ff7bc73e812845a359696e4a71761, type: 3}
-  bulletForce: 50
+  bulletPoint2: {fileID: 0}
+  bulletPrefab: {fileID: 7083986773596307050, guid: 45fc7df9492f4cf438bece74a6bf7b81, type: 3}
+  gunType: 3
+  bulletForce: 30
 --- !u!70 &2231490643965218754
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -303,3 +290,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-5395608079457528877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9197228896789570157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf66aa03e5c8f449a30d230963b3fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 8
+--- !u!114 &6786873390598411146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9197228896789570157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf2d10fd30b9b343bf7265c3c6a39ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moving: 0
+  moveSpeed: 0.5
+  TimeManager: {fileID: 3721543498802627715, guid: c89c11dd6ce2f2d47912e47a8e6696a2, type: 3}
+  conciousness: {fileID: 5132283873648381468, guid: d60d0c5f015984847beaf09e4ca8ebd6, type: 3}

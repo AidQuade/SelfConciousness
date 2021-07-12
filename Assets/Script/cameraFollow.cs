@@ -5,7 +5,7 @@ using UnityEngine;
 public class cameraFollow : MonoBehaviour
 {
     GameObject player;
-
+    //private GameObject concious;
     private bool following = true;
     
     // Start is called before the first frame update
@@ -16,6 +16,7 @@ public class cameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //concious = GameObject.FindGameObjectWithTag("Con");
         player = GameObject.FindGameObjectWithTag("Player");
         if (following == true)
         {

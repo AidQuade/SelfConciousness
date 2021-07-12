@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489153675671966369}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7660445, w: -0.6427876}
   m_LocalPosition: {x: 0.987, y: -0.22642706, z: 0}
   m_LocalScale: {x: 0.4459906, y: 0.4459906, z: 0.4459906}
   m_Children: []
   m_Father: {fileID: 489153676091081595}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 260}
 --- !u!1 &489153675681482392
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dca21294070c11d48aee702c2a1b91c0, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -125,8 +125,9 @@ GameObject:
   - component: {fileID: 489153676091081593}
   - component: {fileID: 489153676091081592}
   - component: {fileID: 489153676091081596}
-  - component: {fileID: 489153676091081598}
   - component: {fileID: 489153676091081597}
+  - component: {fileID: 32601553528192404}
+  - component: {fileID: -5787179010758908890}
   m_Layer: 0
   m_Name: enemy1
   m_TagString: Enemy
@@ -147,6 +148,7 @@ Transform:
   m_Children:
   - {fileID: 489153675681482393}
   - {fileID: 489153675671966370}
+  - {fileID: 7891541848091995456}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -169,7 +171,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dca21294070c11d48aee702c2a1b91c0, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -189,7 +191,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 0.6314336, b: 0.0141509175, a: 1}
   m_FlipX: 0
@@ -220,7 +222,7 @@ MonoBehaviour:
   bullet: {fileID: 7829298114233569551, guid: 2a4ff7bc73e812845a359696e4a71761, type: 3}
   bulletPoint: {fileID: 489153675671966370}
   health: 10
-  bulletForce: 35
+  bulletForce: 60
   startTimeShots: 1.3
 --- !u!50 &489153676091081592
 Rigidbody2D:
@@ -235,8 +237,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 130
-  m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_LinearDrag: 10
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -269,22 +271,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.6661808}
   m_EdgeRadius: 0
---- !u!114 &489153676091081598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489153676091081591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da2c09552d137f74d806bfced1e5ff79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moving: 0
-  moveSpeed: 0.3
-  TimeManager: {fileID: 3721543498802627715, guid: c89c11dd6ce2f2d47912e47a8e6696a2, type: 3}
-  conciousness: {fileID: 5132283873648381468, guid: d60d0c5f015984847beaf09e4ca8ebd6, type: 3}
 --- !u!114 &489153676091081597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,5 +284,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPoint: {fileID: 489153675671966370}
-  bulletPrefab: {fileID: 7829298114233569551, guid: 2a4ff7bc73e812845a359696e4a71761, type: 3}
-  bulletForce: 30
+  bulletPoint2: {fileID: 7891541848091995456}
+  bulletPrefab: {fileID: 8977209977289860958, guid: 52035eb4c61c1f94982ced22a9cdc81c, type: 3}
+  gunType: 2
+  bulletForce: 70
+--- !u!114 &32601553528192404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489153676091081591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf66aa03e5c8f449a30d230963b3fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 14
+--- !u!114 &-5787179010758908890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489153676091081591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ab81da5afb48340a396855918151cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moving: 0
+  moveSpeed: 0.26
+  TimeManager: {fileID: 3721543498802627715, guid: c89c11dd6ce2f2d47912e47a8e6696a2, type: 3}
+  conciousness: {fileID: 5132283873648381468, guid: d60d0c5f015984847beaf09e4ca8ebd6, type: 3}
+--- !u!1 &6878744091749113099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7891541848091995456}
+  m_Layer: 0
+  m_Name: bulletPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7891541848091995456
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878744091749113099}
+  m_LocalRotation: {x: 0, y: -0, z: 0.6427877, w: -0.7660444}
+  m_LocalPosition: {x: 0.987, y: 0.138, z: 0}
+  m_LocalScale: {x: 0.4459906, y: 0.4459906, z: 0.4459906}
+  m_Children: []
+  m_Father: {fileID: 489153676091081595}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 280}

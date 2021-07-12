@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - projectile
   - timemanager
+  - Con
+  - projectile2
   layers:
   - Default
   - TransparentFX
@@ -44,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: lazers
+    uniqueID: 4162318361
     locked: 0

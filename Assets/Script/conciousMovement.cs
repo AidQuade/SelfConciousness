@@ -9,23 +9,24 @@ public class conciousMovement : MonoBehaviour
     public float moveSpeed = 0.3f;
     private Rigidbody2D rb;
     private bool isPlayer = true;
-    public float survivalTime = 5f;
-    private float timeOut;
     private Vector2 movement;
+
+    public float deathtime = 2f;
     // Start is called before the first frame update
     void Start()
     {
-        timeOut = survivalTime;
+        Invoke("Deathscene", deathtime);
     }
 
     private void Awake()
     {
-        timeOut = 5f;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         //inputs
         if (isPlayer == true)
         {
@@ -35,15 +36,10 @@ public class conciousMovement : MonoBehaviour
             movement.y = Input.GetAxisRaw("Vertical");
         }
         //death countdown
-        /*if (timeOut <= 0)
-        {
-            //Destroy(gameObject);
-           // SceneManager.LoadScene("death");
-        }
-        else
-        {
-            timeOut -= Time.deltaTime;
-        }*/
+    
+          
+ 
+
 
     }
     private void FixedUpdate()
@@ -64,7 +60,15 @@ public class conciousMovement : MonoBehaviour
             collision.gameObject.GetComponent<EnemyAiFollow>().enabled = false;
             collision.gameObject.GetComponent<shooter>().enabled = true;
             collision.gameObject.GetComponent<playerMovement>().enabled = true;
-            
+            collision.gameObject.GetComponent<PlayerShotgun>().enabled = true;
+            collision.gameObject.GetComponent<PlayerDasher>().enabled = true;
+            collision.gameObject.GetComponent<Playerbeam>().enabled = true;
+             //Destroy(this);
         }
+    }
+    void Deathscene()
+    {
+        // Death screen
+        SceneManager.LoadScene("Scenes/death");
     }
 }

@@ -85,6 +85,10 @@ public class EnemyAiFollow : MonoBehaviour
             health = health - 1;
                 
         }
+        else if (collision.gameObject.tag == "projectile2")
+        {
+            health = health - 3;
+        }
 
         if (health <= 0)
         {

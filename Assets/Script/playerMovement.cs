@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    
+    public Animator animator;
     public bool moving = false;
     public float moveSpeed = 0.3f;
     public timeManager TimeManager;
@@ -15,9 +15,9 @@ public class playerMovement : MonoBehaviour
     private bool isPlayer = true;
     private Vector2 movement;
     private Vector3 mousePos;
-
+    
     private Camera cam;
-
+    
     private Rigidbody2D rd;
     void Start()
     {
@@ -47,7 +47,16 @@ public class playerMovement : MonoBehaviour
             movement.y = Input.GetAxisRaw("Vertical");
         }
 
-
+        if (movement.x > 0 || movement.y > 0)
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
+        
+        
         if (Input.GetKeyDown(KeyCode.LeftShift) && gameObject.tag == "Player")
         {
             TimeManager.SlowMotion();
