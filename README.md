@@ -3,15 +3,15 @@
    This github will serve as the blog and progress updates for the top down shoot em up game I am working on. 
    
    # HOW TO PLAY
-     This game is a top down shooter utilizing a mechanic where the player can switch into any enemies body and then takes control of that body until death or they are able to switch again. 
-     LEFT SHIFT: Pop out of current body into an orb of conciousness, colliding into any enemy as this orb will take control of their body instead. This kills your current body. There is a small bullet time effect when initially leaving the body in order to help the player get into an enemy.
-     BEWARE - you can only survive as a concious orb for so long outside of a body so find one quick.
-     Each enemy has different weapon types, health, move speed and some enemies have special abilities.
-     Some enemies fire by holding down left click while others fire semi automatically on each click
-     SPACE: Use current bodies special ability if applicable
-     Try to reach the exit of the level, killing and switching along the way to get a higher score.
-     TIPS:
-     -It can be difficult to survive long at first but switching is always the better option then trying to fight it out in a low health body
+   This game is a top down shooter utilizing a mechanic where the player can switch into any enemies body and then takes control of that body until death or they are able to switch again. 
+LEFT SHIFT: Pop out of current body into an orb of conciousness, colliding into any enemy as this orb will take control of their body instead. This kills your current body. There is a small bullet time effect when initially leaving the body in order to help the player get into an enemy.
+BEWARE - you can only survive as a concious orb for so long outside of a body so find one quick.
+Each enemy has different weapon types, health, move speed and some enemies have special abilities.
+Some enemies fire by holding down left click while others fire semi automatically on each click
+SPACE: Use current bodies special ability if applicable
+Try to reach the exit of the level, killing and switching along the way to get a higher score.
+TIP:
+-It can be difficult to survive long at first but switching is always the better option then trying to fight it out in a low health body
      
    
   # Initial brainstorming/ Concept Sketches
