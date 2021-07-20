@@ -7,12 +7,12 @@
    
 LEFT SHIFT: Pop out of current body into an orb of conciousness, colliding into any enemy as this orb will take control of their body instead. This kills your current body. There is a small bullet time effect when initially leaving the body in order to help the player get into an enemy.
 
+SPACE: Use current bodies special ability if applicable
+
 BEWARE - you can only survive as a concious orb for so long outside of a body so find one quick.
 
 Each enemy has different weapon types, health, move speed and some enemies have special abilities.
 Some enemies fire by holding down left click while others fire semi automatically on each click
-
-SPACE: Use current bodies special ability if applicable
 
 Try to reach the exit of the level, killing and switching along the way to get a higher score.
 
