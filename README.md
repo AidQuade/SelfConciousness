@@ -1,3 +1,4 @@
+![art2](https://user-images.githubusercontent.com/60955272/126854137-42237f7a-03cd-4264-bf8d-e0d8bc8bc353.png)
 # selfconcious
 
    This github will serve as the blog and progress updates for the top down shoot em up game I am working on. 
@@ -45,4 +46,6 @@ This second week I did not get as far as I would have liked on the core switchin
  This week I fixed the switching to be more responsive and shortened the amount of time the player can survive while switching while also putting the switch ability on a cool down so it cant be abused to beat levels. I also added a couple more enemies with variations in their attributes and began to create different shooting styles with different projectile types for each enemy.
  # Progress 6 Adding more art assets and testing different level designs
    I have been trying out different aspects of level design in my test level in order to decide which types of levels will be best for my gameplay moving forward and creating official different levels to progress through. I also have been adding more pixel art assets with animations to them for the enemies and projectiles.
-   # Progress 7 Adding finished levels and UI elements as well as the progression of beating and moving between levels.
+   # Progress 7 Adding finished levels as well as the progression of beating and moving between levels.
+    The game is now playable as a demo and mechanically complete, there is just visual elements that could polish the level of gameplay and overall experience as well as UI needed in order to see whats going on with the different mechanics and cooldowns and enemy types.
+   # Progress 8 Added UI components, some visual effects for better understanding of the gameplay and special space bar abilitys to a couple more enemies.
